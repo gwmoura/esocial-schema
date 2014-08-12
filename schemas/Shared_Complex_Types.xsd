@@ -16,7 +16,7 @@
 
     <xs:complexType name="TideEmpregador">
         <xs:sequence>
-            <xs:element name="ideEmpregador" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
