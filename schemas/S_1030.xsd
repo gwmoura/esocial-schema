@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Instituto Stela 2014-->
+<!--Author: Daniel Felipe Schröder-->
 <!--Manual de Orientação do eSocial - Versão 1.1 - 06 de Janeiro de 2014-->
 <!--Layout S-1030 - Tabela de Cargos-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="Shared_Complex_Types.xsd"/>
+
+    <xs:element name="evtTabCargo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ideEvento" type="TideEvento" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+
+                <xs:element name="infocargo" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="inclusao" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ideCargo" type="TideCargo" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dadosCargo" type="TdadosCargo" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="alteracao" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ideCargo" type="TideCargo" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dadosCargo" type="TdadosCargo" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="novaValidade" type="TidePeriodo" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="exclusao" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ideCargo" type="TideCargo" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="versao" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TideCargo">
+        <xs:sequence>
+            <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TdadosCargo">
+        <xs:sequence>
+            <xs:element name="descCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
