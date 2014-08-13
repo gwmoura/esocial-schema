@@ -39,4 +39,17 @@
             <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="Tendereco">
+        <xs:sequence>
+            <xs:element name="tpLogradouro" type="TtpLogradouro" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="complemento" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codMunicipio" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
