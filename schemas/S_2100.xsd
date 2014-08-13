@@ -1,5 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Instituto Stela 2014-->
+<!--Author: Daniel Felipe Schröder-->
 <!--Manual de Orientação do eSocial - Versão 1.1 - 06 de Janeiro de 2014-->
 <!--Layout S-2100 – Cadastramento Inicial do Vínculo-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="Shared_Complex_Types.xsd"/>
+
+    <xs:element name="evtCadInicial">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+
+                <xs:element name="trabalhador" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="nomeTrab" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="sexo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="racaCor" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="estadoCivil" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="grauInstrucao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                            <xs:element name="nascimento" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dtNascto" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="codMunicipio" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="uf" type="Tuf" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="paisNascto" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="paisNacionalidade" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="nomeMae" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="nomePai" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="documentos" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CTPS" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrCtps" type="TnrCtps" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="serieCtps" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="ufCtps" type="Tuf" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="RIC" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrRic" type="TnrRic" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="orgaoEmissor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtExpedicao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="RG" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrRg" type="TnrRg" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="orgaoEmissor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtExpedicao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="RNE" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrRne" type="TnrRne" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="orgaoEmissor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtExpedicao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="OC" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrOc" type="TnrOc" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="orgaoEmissor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtExpedicao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtValidade" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="CNH" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrCnh" type="TnrCnh" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="orgaoEmissor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtExpedicao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtValidade" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="endereco" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="brasil" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="tpLogradouro" type="TtpLogradouro" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="complemento" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="codMunicipio" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="exterior" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="paisResidencia" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="complemento" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                    <xs:element name="nomeCidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="codPostal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="trabEstrangeiro" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dtChegada" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dtNaturalizacao" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="casadoBr" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="filhosBr" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="infoDeficiencia" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="defFisica" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="defVisual" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="defAuditiva" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="defMental" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="defIntelectual" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="reabilitado" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="dependente" minOccurs="0" maxOccurs="50">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tpDep" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="nomeDep" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dtNascto" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="cpfDep" type="Tcpf" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="depIRRF" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="depSF" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="aposentadoria" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="trabAposentado" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="contato" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fonePrincipal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="foneAlternativo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="emailPrincipal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="emailAlternativo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="vinculo" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="dtAdmissao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="tpAdmissao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="indAdmissao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="indPrimeiroEmprego" type="xs:string" minOccurs="1" maxOccurs="1"/>
+
+                            <xs:element name="contrato" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tpRegimeTrab" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="tpRegimePrev" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="tpRegimeJor" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="natAtividade" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="codCateg" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="codFuncao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="codCBO" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dataBase" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                                        <xs:element name="remuneracao" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="unidSalFixo" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="duracao" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="tpContrato" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="dtTermino" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="trabTemporario" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="motivoContratacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                                                    <xs:element name="ideTrabSubstituido" minOccurs="0" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="cpfTrabSubstituido" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="matricTrabSubstituido" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="localTrabalho" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="descComplementar" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="horContratual" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="qtdHoras" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                                                    <xs:element name="horario" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="dia" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="codHorContratual" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="infoAtivDesemp" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="descAtividade" minOccurs="0" maxOccurs="50">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="descAtivDesemp" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="filiacaoSindical" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="cnpjSindTrabalhador" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="alvaraJudicial" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nrProcJud" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="FGTS" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="optanteFGTS" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dtOpcaoFGTS" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="sucessaoVinc" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cnpjEmpregadorAnterior" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="matriculaAnterior" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dtInicioVinculo" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="cessaoTrab" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cnpjCedente" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="matriculaCedente" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="dtAdmissaoCedente" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="ASO" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
+
+                                        <xs:element name="medico" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="foneContato" type="xs:string" minOccurs="0" maxOccurs="1"/>
+
+                                                    <xs:element name="crm" minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="exame" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="versao" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

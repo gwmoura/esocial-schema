@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Instituto Stela 2014-->
+<!--Author: Daniel Felipe Schröder-->
 <!--Manual de Orientação do eSocial - Versão 1.1 - 06 de Janeiro de 2014-->
 <!--SimpleTypes compartilhados pelos layouts do eSocial-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -14,6 +15,69 @@
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tnis">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrCtps">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrRic">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrRg">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrRne">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrOc">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrCnh">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrLogradouro">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tcep">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{8}"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -47,6 +111,57 @@
             <xs:enumeration value="SE"/>
             <xs:enumeration value="SP"/>
             <xs:enumeration value="TO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpLogradouro">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:enumeration value="AER"/>
+            <xs:enumeration value="AL"/>
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="AV"/>
+            <xs:enumeration value="CPO"/>
+            <xs:enumeration value="CH"/>
+            <xs:enumeration value="COL"/>
+            <xs:enumeration value="CON"/>
+            <xs:enumeration value="CJ"/>
+            <xs:enumeration value="DT"/>
+            <xs:enumeration value="ESP"/>
+            <xs:enumeration value="ETC"/>
+            <xs:enumeration value="EST"/>
+            <xs:enumeration value="FAV"/>
+            <xs:enumeration value="FAZ"/>
+            <xs:enumeration value="FRA"/>
+            <xs:enumeration value="JD"/>
+            <xs:enumeration value="LD"/>
+            <xs:enumeration value="LG"/>
+            <xs:enumeration value="LGA"/>
+            <xs:enumeration value="LRG"/>
+            <xs:enumeration value="LOT"/>
+            <xs:enumeration value="MRO"/>
+            <xs:enumeration value="NUC"/>
+            <xs:enumeration value="O"/>
+            <xs:enumeration value="PRQ"/>
+            <xs:enumeration value="PSA"/>
+            <xs:enumeration value="PAT"/>
+            <xs:enumeration value="PC"/>
+            <xs:enumeration value="Q"/>
+            <xs:enumeration value="REC"/>
+            <xs:enumeration value="RES"/>
+            <xs:enumeration value="ROD"/>
+            <xs:enumeration value="R"/>
+            <xs:enumeration value="ST"/>
+            <xs:enumeration value="SIT"/>
+            <xs:enumeration value="TV"/>
+            <xs:enumeration value="TR"/>
+            <xs:enumeration value="TRV"/>
+            <xs:enumeration value="VLE"/>
+            <xs:enumeration value="VER"/>
+            <xs:enumeration value="V"/>
+            <xs:enumeration value="VD"/>
+            <xs:enumeration value="VLA"/>
+            <xs:enumeration value="VL"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
