@@ -67,4 +67,12 @@
             <xs:element name="ufOC" type="Tuf" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="TideVinculo">
+        <xs:sequence>
+            <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nisTrab" type="Tnis" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

@@ -11,16 +11,7 @@
             <xs:sequence>
                 <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
-
-                <xs:element name="ideVinculo" minOccurs="1" maxOccurs="1">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="nisTrab" type="Tnis" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
 
                 <xs:element name="infoAfastamento" minOccurs="1" maxOccurs="1">
                     <xs:complexType>
