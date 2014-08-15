@@ -26,6 +26,19 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="TideEventoPeriodico">
+        <xs:sequence>
+            <xs:element name="indRetificacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrRecibo" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="indApuracao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="perApuracao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpAmb" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="procEmi" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="indSegmento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="verProc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="TideEmpregador">
         <xs:sequence>
             <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
