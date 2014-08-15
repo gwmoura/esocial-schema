@@ -49,7 +49,5 @@ Listagem de Schemas:
 * **S_2345:** Layout S-2345 - Estabilidade - Término
 * **S_2360:** Layout S-2360 - Condição Diferenciada de Trabalho - Início
 * **S_2365:** Layout S-2365 - Condição Diferenciada de Trabalho - Término
-
-
 * **Shared_Complex_Types:** ComplexTypes compartilhados pelos layouts do eSocial
 * **Shared_Simple_Types:** SimpleTypes compartilhados pelos layouts do eSocial

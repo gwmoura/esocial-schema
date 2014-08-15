@@ -59,4 +59,12 @@
             <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="Temitente">
+        <xs:sequence>
+            <xs:element name="nomeEmitente" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrOc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ufOC" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

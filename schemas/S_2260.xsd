@@ -84,16 +84,7 @@
                                         <xs:element name="diagProvavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
                                         <xs:element name="codCID" type="xs:string" minOccurs="1" maxOccurs="1"/>
                                         <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
-
-                                        <xs:element name="emitente" minOccurs="1" maxOccurs="1">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="nomeEmitente" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                                    <xs:element name="nrOc" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                                    <xs:element name="ufOC" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
+                                        <xs:element name="emitente" type="Temitente" minOccurs="1" maxOccurs="1"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
