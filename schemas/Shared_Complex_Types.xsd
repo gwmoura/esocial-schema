@@ -52,4 +52,11 @@
             <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="TideTrabalhador">
+        <xs:sequence>
+            <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
