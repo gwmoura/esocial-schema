@@ -7,12 +7,22 @@ Haja visto que estes arquivos não são "oficiais" e foram transcritos do
 [manual do e-Social](http://www.esocial.gov.br/doc/MOS_V_1_1_Publicacao.pdf)
 divulgado pelo Governo, eles podem conter alguns erros e/ou mesmo diferentes formas de
 modelagem em relação aos arquivos oficialmente utilizados pela Previdência Social.
-Portanto, utilize-os com critério.
+Portanto, **utilize-os com critério.**
 
 **VERSÃO UTILIZADA: 1.1 de 06 de Janeiro de 2014.**
 
+Bug reports e sugestões:
+------------------------
+Como a ajuda da comunidade é sempre bem-vinda, por favor reportem qualquer bug encontrado na página 
+[issues](https://github.com/instituto-stela/esocial-schema/issues) no GitHub. Contudo, evitem a
+duplicidade de informação verificando se o problema já não foi reportado.
+
+Além disso, toda sugestão e/ou contribuição através de Pull Requests será analisada e,
+se possível, incorporada ao XML Schema do e-Social.
+
 Listagem de Schemas:
 --------------------
+* **Esocial:** Arquivo raiz do XML Schema do e-Social
 * **S_1000:** Layout S-1000 - Informações do Empregador/Contribuinte
 * **S_1010:** Layout S-1010 - Tabela de Rubricas
 * **S_1020:** Layout S-1020 - Tabela de Lotações
