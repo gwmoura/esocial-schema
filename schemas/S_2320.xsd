@@ -6,54 +6,52 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="Shared_Complex_Types.xsd"/>
 
-    <xs:element name="evtAfastTemp">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
+    <xs:complexType name="evtAfastTemp">
+        <xs:sequence>
+            <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
 
-                <xs:element name="infoAfastamento" minOccurs="1" maxOccurs="1">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="dtAfastamento" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="tpAcidenteTransito" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                            <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="infoAfastamento" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dtAfastamento" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="tpAcidenteTransito" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
 
-                            <xs:element name="infoAtestado" minOccurs="0" maxOccurs="1">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="codCID" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                                        <xs:element name="qtdDiasAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                                        <xs:element name="emitente" type="Temitente" minOccurs="1" maxOccurs="1"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
+                        <xs:element name="infoAtestado" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="codCID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="qtdDiasAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="emitente" type="Temitente" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
 
-                            <xs:element name="infoCessao" minOccurs="0" maxOccurs="1">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="cnpjCessionario" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                                        <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
+                        <xs:element name="infoCessao" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cnpjCessionario" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
 
-                            <xs:element name="infoMandadoSindical" minOccurs="0" maxOccurs="1">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="cnpjSindicato" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                                        <xs:element name="infoOnusRemuneracao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:string" use="required"/>
-            <xs:attribute name="versao" type="xs:string" use="required"/>
-        </xs:complexType>
-    </xs:element>
+                        <xs:element name="infoMandadoSindical" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cnpjSindicato" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="infoOnusRemuneracao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
+    </xs:complexType>
 </xs:schema>

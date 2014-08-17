@@ -6,25 +6,23 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="Shared_Complex_Types.xsd"/>
 
-    <xs:element name="evtAfastRetorno">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
+    <xs:complexType name="evtAfastRetorno">
+        <xs:sequence>
+            <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
 
-                <xs:element name="infoRetorno" minOccurs="1" maxOccurs="1">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="dtRetorno" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                            <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:string" use="required"/>
-            <xs:attribute name="versao" type="xs:string" use="required"/>
-        </xs:complexType>
-    </xs:element>
+            <xs:element name="infoRetorno" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dtRetorno" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
+    </xs:complexType>
 </xs:schema>

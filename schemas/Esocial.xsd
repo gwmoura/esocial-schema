@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Instituto Stela 2014-->
+<!--Author: Daniel Felipe Schröder-->
+<!--Manual de Orientação do eSocial - Versão 1.1 - 06 de Janeiro de 2014-->
+<!--Arquivo raiz do XML Schema do e-Social-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="S_1000.xsd"/>
+    <xs:include schemaLocation="S_1010.xsd"/>
+    <xs:include schemaLocation="S_1020.xsd"/>
+    <xs:include schemaLocation="S_1030.xsd"/>
+    <xs:include schemaLocation="S_1040.xsd"/>
+    <xs:include schemaLocation="S_1050.xsd"/>
+    <xs:include schemaLocation="S_1060.xsd"/>
+    <xs:include schemaLocation="S_1070.xsd"/>
+    <xs:include schemaLocation="S_1080.xsd"/>
+    <xs:include schemaLocation="S_1100.xsd"/>
+    <xs:include schemaLocation="S_1200.xsd"/>
+    <xs:include schemaLocation="S_1300.xsd"/>
+    <xs:include schemaLocation="S_1310.xsd"/>
+    <xs:include schemaLocation="S_1320.xsd"/>
+    <xs:include schemaLocation="S_1330.xsd"/>
+    <xs:include schemaLocation="S_1340.xsd"/>
+    <xs:include schemaLocation="S_1350.xsd"/>
+    <xs:include schemaLocation="S_1360.xsd"/>
+    <xs:include schemaLocation="S_1370.xsd"/>
+    <xs:include schemaLocation="S_1380.xsd"/>
+    <xs:include schemaLocation="S_1390.xsd"/>
+    <xs:include schemaLocation="S_1399.xsd"/>
+    <xs:include schemaLocation="S_1800.xsd"/>
+    <xs:include schemaLocation="S_2100.xsd"/>
+    <xs:include schemaLocation="S_2200.xsd"/>
+    <xs:include schemaLocation="S_2220.xsd"/>
+    <xs:include schemaLocation="S_2240.xsd"/>
+    <xs:include schemaLocation="S_2260.xsd"/>
+    <xs:include schemaLocation="S_2280.xsd"/>
+    <xs:include schemaLocation="S_2320.xsd"/>
+    <xs:include schemaLocation="S_2325.xsd"/>
+    <xs:include schemaLocation="S_2330.xsd"/>
+    <xs:include schemaLocation="S_2340.xsd"/>
+    <xs:include schemaLocation="S_2345.xsd"/>
+    <xs:include schemaLocation="S_2360.xsd"/>
+    <xs:include schemaLocation="S_2365.xsd"/>
+
+    <xs:element name="eSocial">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="evtInfoEmpregador" type="evtInfoEmpregador" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabRubrica" type="evtTabRubrica" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabLotacao" type="evtTabLotacao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabCargo" type="evtTabCargo" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabFuncao" type="evtTabFuncao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabHorContratual" type="evtTabHorContratual" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabEstab" type="evtTabEstab" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabProcesso" type="evtTabProcesso" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTabOperPortuario" type="evtTabOperPortuario" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpAbertura" type="evtFpAbertura" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpRemuneracao" type="evtFpRemuneracao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtPagtosDiversos" type="evtPagtosDiversos" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpServTomados" type="evtFpServTomados" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpServPrestados" type="evtFpServPrestados" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpServTomadosCoop" type="evtFpServTomadosCoop" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpServPrestadosCoop" type="evtFpServPrestadosCoop" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpAquisProducao" type="evtFpAquisProducao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpComercProducao" type="evtFpComercProducao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpAssocDesportiva" type="evtFpAssocDesportiva" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpInfoDesoneracao" type="evtFpInfoDesoneracao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpRecAtivConcomitante" type="evtFpRecAtivConcomitante" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtFpFechamento" type="evtFpFechamento" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtEspDesportivo" type="evtEspDesportivo" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtCadInicial" type="evtCadInicial" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAdmissao" type="evtAdmissao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAltCadastral" type="evtAltCadastral" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAltContratual" type="evtAltContratual" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtCAT" type="evtCAT" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtASO" type="evtASO" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAfastTemp" type="evtAfastTemp" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAltMotAfast" type="evtAltMotAfast" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAfastRetorno" type="evtAfastRetorno" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtEstabInicio" type="evtEstabInicio" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtEstabTermino" type="evtEstabTermino" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtCDTInicio" type="evtCDTInicio" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtCDTTermino" type="evtCDTTermino" minOccurs="0" maxOccurs="1"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
