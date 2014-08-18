@@ -8,7 +8,20 @@
 
     <xs:complexType name="evtAltMotAfast">
         <xs:sequence>
-            <!--TODO-->
+            <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="infoAltMotivo" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dtAltMotivo" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotivoAnterior" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indEfeitoRetroativo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
