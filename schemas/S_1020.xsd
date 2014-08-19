@@ -46,14 +46,6 @@
         <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="TideLotacao">
-        <xs:sequence>
-            <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="TdadosLotacao">
         <xs:sequence>
             <xs:element name="descLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -81,6 +73,14 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TideLotacao">
+        <xs:sequence>
+            <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

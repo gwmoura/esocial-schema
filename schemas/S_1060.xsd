@@ -46,15 +46,6 @@
         <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="TideEstab">
-        <xs:sequence>
-            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="TdadosEstab">
         <xs:sequence>
             <xs:element name="fpas" type="xs:integer" minOccurs="1" maxOccurs="1"/>
@@ -78,6 +69,15 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TideEstab">
+        <xs:sequence>
+            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

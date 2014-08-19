@@ -6,19 +6,193 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="Shared_Simple_Types.xsd"/>
 
-    <xs:complexType name="TideEvento">
+    <xs:complexType name="TcessaoTrab">
         <xs:sequence>
-            <xs:element name="tpAmb" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="procEmi" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="indSegmento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="verProc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="cnpjCedente" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="matriculaCedente" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dtAdmissaoCedente" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TideEventoRetificador">
+    <xs:complexType name="Tcontrato">
         <xs:sequence>
-            <xs:element name="indRetificacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrRecibo" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="tpRegimeTrab" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpRegimePrev" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpRegimeJor" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="natAtividade" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codCateg" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codFuncao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codCBO" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dataBase" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="remuneracao" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="unidSalFixo" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="duracao" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tpContrato" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="dtTermino" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="trabTemporario" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="motivoContratacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                        <xs:element name="ideTrabSubstituido" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cpfTrabSubstituido" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="matricTrabSubstituido" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="localTrabalho" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="descComplementar" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="horContratual" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="qtdHoras" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+
+                        <xs:element name="horario" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="dia" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="codHorContratual" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="infoAtivDesemp" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="descAtividade" minOccurs="0" maxOccurs="50">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="descAtivDesemp" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="filiacaoSindical" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cnpjSindTrabalhador" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="alvaraJudicial" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nrProcJud" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TdtAso">
+        <xs:sequence>
+            <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="medico" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="foneContato" type="xs:string" minOccurs="0" maxOccurs="1"/>
+
+                        <xs:element name="crm" minOccurs="1" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="exame" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Temitente">
+        <xs:sequence>
+            <xs:element name="nomeEmitente" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrOc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ufOC" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tendereco">
+        <xs:sequence>
+            <xs:element name="tpLogradouro" type="TtpLogradouro" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="complemento" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codMunicipio" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TFGTS">
+        <xs:sequence>
+            <xs:element name="optanteFGTS" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dtOpcaoFGTS" type="xs:date" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TideEmpregador">
+        <xs:sequence>
+            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TideEvento">
+        <xs:sequence>
             <xs:element name="tpAmb" type="xs:integer" minOccurs="1" maxOccurs="1"/>
             <xs:element name="procEmi" type="xs:integer" minOccurs="1" maxOccurs="1"/>
             <xs:element name="indSegmento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
@@ -39,10 +213,14 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TideEmpregador">
+    <xs:complexType name="TideEventoRetificador">
         <xs:sequence>
-            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="indRetificacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrRecibo" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="tpAmb" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="procEmi" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="indSegmento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="verProc" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -53,31 +231,10 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Tendereco">
-        <xs:sequence>
-            <xs:element name="tpLogradouro" type="TtpLogradouro" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="complemento" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="codMunicipio" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="TideTrabalhador">
         <xs:sequence>
             <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Temitente">
-        <xs:sequence>
-            <xs:element name="nomeEmitente" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrOc" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="ufOC" type="Tuf" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -86,6 +243,15 @@
             <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nisTrab" type="Tnis" minOccurs="1" maxOccurs="1"/>
             <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TsucessaoVinc">
+        <xs:sequence>
+            <xs:element name="cnpjEmpregadorAnterior" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="matriculaAnterior" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dtInicioVinculo" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -251,172 +417,6 @@
                         <xs:element name="foneAlternativo" type="xs:string" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="emailPrincipal" type="xs:string" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="emailAlternativo" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Tcontrato">
-        <xs:sequence>
-            <xs:element name="tpRegimeTrab" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="tpRegimePrev" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="tpRegimeJor" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="natAtividade" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="codCateg" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="codFuncao" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="codCBO" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="dataBase" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-
-            <xs:element name="remuneracao" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="unidSalFixo" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="duracao" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="tpContrato" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="dtTermino" type="xs:date" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="trabTemporario" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="motivoContratacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-
-                        <xs:element name="ideTrabSubstituido" minOccurs="0" maxOccurs="1">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="cpfTrabSubstituido" type="Tcpf" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="matricTrabSubstituido" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="localTrabalho" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descComplementar" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="horContratual" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="qtdHoras" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-
-                        <xs:element name="horario" minOccurs="1" maxOccurs="unbounded">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="dia" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="codHorContratual" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="infoAtivDesemp" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="descAtividade" minOccurs="0" maxOccurs="50">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="descAtivDesemp" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="filiacaoSindical" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="cnpjSindTrabalhador" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="alvaraJudicial" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nrProcJud" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TFGTS">
-        <xs:sequence>
-            <xs:element name="optanteFGTS" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="dtOpcaoFGTS" type="xs:date" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TsucessaoVinc">
-        <xs:sequence>
-            <xs:element name="cnpjEmpregadorAnterior" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="matriculaAnterior" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="dtInicioVinculo" type="xs:date" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TcessaoTrab">
-        <xs:sequence>
-            <xs:element name="cnpjCedente" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="matriculaCedente" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="dtAdmissaoCedente" type="xs:date" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TdtAso">
-        <xs:sequence>
-            <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
-
-            <xs:element name="medico" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="foneContato" type="xs:string" minOccurs="0" maxOccurs="1"/>
-
-                        <xs:element name="crm" minOccurs="1" maxOccurs="1">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="exame" minOccurs="0" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
