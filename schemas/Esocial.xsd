@@ -40,6 +40,14 @@
     <xs:include schemaLocation="S_2345.xsd"/>
     <xs:include schemaLocation="S_2360.xsd"/>
     <xs:include schemaLocation="S_2365.xsd"/>
+    <xs:include schemaLocation="S_2400.xsd"/>
+    <xs:include schemaLocation="S_2405.xsd"/>
+    <xs:include schemaLocation="S_2600.xsd"/>
+    <xs:include schemaLocation="S_2620.xsd"/>
+    <xs:include schemaLocation="S_2680.xsd"/>
+    <xs:include schemaLocation="S_2800.xsd"/>
+    <xs:include schemaLocation="S_2820.xsd"/>
+    <xs:include schemaLocation="S_2900.xsd"/>
 
     <xs:element name="eSocial">
         <xs:complexType>
@@ -80,6 +88,14 @@
                 <xs:element name="evtEstabTermino" type="evtEstabTermino" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="evtCDTInicio" type="evtCDTInicio" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="evtCDTTermino" type="evtCDTTermino" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtAvisoPrevio" type="evtAvisoPrevio" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtCancAvisoPrevio" type="evtCancAvisoPrevio" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTSVInicio" type="evtTSVInicio" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTSVAltContratual" type="evtTSVAltContratual" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtTSVTermino" type="evtTSVTermino" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtDesligamento" type="evtDesligamento" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtReintegracao" type="evtReintegracao" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evtExclusao" type="evtExclusao" minOccurs="0" maxOccurs="1"/>
             </xs:choice>
         </xs:complexType>
     </xs:element>
