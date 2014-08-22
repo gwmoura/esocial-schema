@@ -16,12 +16,14 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="dtAltMotivo" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMotivoAnterior" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="indEfeitoRetroativo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotivoAnterior" type="TcodMotAfastamento" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="TcodMotAfastamento" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indEfeitoRetroativo" type="TbooleanStr" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:schema>
