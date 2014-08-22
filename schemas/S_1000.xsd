@@ -88,7 +88,7 @@
                         <xs:element name="foneFixo" type="Tfone" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="foneCelular" type="Tfone" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="fax" type="Tfone" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="email" type="Temail" minOccurs="0" maxOccurs="0"/>
+                        <xs:element name="email" type="Temail" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

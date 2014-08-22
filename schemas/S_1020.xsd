@@ -49,16 +49,16 @@
     <xs:complexType name="TdadosLotacao">
         <xs:sequence>
             <xs:element name="descLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="tpLotacao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="tpInscEstab" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="nrInscEstab" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="tpLotacao" type="TtpLotacao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpInscEstab" type="TtpInscEstab" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="nrInscEstab" type="TnrInscEstab" minOccurs="0" maxOccurs="1"/>
             <xs:element name="endereco" type="Tendereco" minOccurs="0" maxOccurs="1"/>
 
             <xs:element name="fpasLotacao" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="fpas" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codTerceiros" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="fpas" type="Tfpas" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codTerceiros" type="TcodTerceiros" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -66,10 +66,10 @@
             <xs:element name="infoEmprParcial" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="tpInscContratante" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nrInscContratante" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="tpInscProprietario" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nrInscProprietario" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="tpInscContratante" type="TtpInscContratante" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="nrInscContratante" type="TnrInscContratante" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="tpInscProprietario" type="TtpInscProprietario" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="nrInscProprietario" type="TnrInscProprietario" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -79,8 +79,8 @@
     <xs:complexType name="TideLotacao">
         <xs:sequence>
             <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="TmesAno" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="TmesAno" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
