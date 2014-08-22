@@ -152,6 +152,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TindApurAliqFap">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TindCooperativa">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="0"/>
@@ -172,6 +179,13 @@
     </xs:simpleType>
 
     <xs:simpleType name="TindSubstPatronalObra">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TinfoApurGrauRisco">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>

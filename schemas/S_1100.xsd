@@ -16,9 +16,9 @@
                     <xs:sequence>
                         <xs:element name="nomeResponsavel" type="xs:string" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="cpfResponsavel" type="Tcpf" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="telefone" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="telefone" type="Tfone" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="fax" type="Tfone" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="email" type="Temail" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -26,8 +26,8 @@
             <xs:element name="infoApuracao" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="infoApurGrauRisco" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="indApurAliqFap" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="infoApurGrauRisco" type="TinfoApurGrauRisco" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indApurAliqFap" type="TindApurAliqFap" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
