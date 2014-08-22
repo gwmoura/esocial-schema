@@ -48,8 +48,8 @@
 
     <xs:complexType name="TdadosEstab">
         <xs:sequence>
-            <xs:element name="fpas" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="codTerceiros" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fpas" type="Tfpas" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codTerceiros" type="TcodTerceiros" minOccurs="1" maxOccurs="1"/>
             <xs:element name="cnaePreponderante" type="xs:integer" minOccurs="1" maxOccurs="1"/>
 
             <xs:element name="aliqGilrat" minOccurs="1" maxOccurs="1">
@@ -65,7 +65,7 @@
             <xs:element name="infoObra" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="indSubstPatronalObra" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indSubstPatronalObra" type="TindSubstPatronalObra" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -74,10 +74,10 @@
 
     <xs:complexType name="TideEstab">
         <xs:sequence>
-            <xs:element name="tpInscricao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="nrInscricao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="tpInscricao" type="TtpInscricao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrInscricao" type="TnrInscricao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="TmesAno" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="TmesAno" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

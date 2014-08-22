@@ -171,6 +171,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TindSubstPatronalObra">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TmesAno">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
@@ -217,6 +224,13 @@
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{11}|[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnrInscricao">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{14}"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -292,6 +306,15 @@
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpInscricao">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
         </xs:restriction>
     </xs:simpleType>
 
