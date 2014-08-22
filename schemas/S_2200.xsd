@@ -17,9 +17,9 @@
                     <xs:sequence>
                         <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="dtAdmissao" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="tpAdmissao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="indAdmissao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="indPrimeiroEmprego" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="tpAdmissao" type="TtpAdmissao" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indAdmissao" type="TindAdmissao" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="indPrimeiroEmprego" type="TbooleanStr" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="infoContrato" type="Tcontrato" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="FGTS" type="TFGTS" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="sucessaoVinc" type="TsucessaoVinc" minOccurs="0" maxOccurs="1"/>
