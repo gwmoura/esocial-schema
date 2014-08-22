@@ -5,10 +5,50 @@
 <!--SimpleTypes compartilhados pelos layouts do eSocial-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
+    <xs:simpleType name="TbooleanNum">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TbooleanStr">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:enumeration value="S"/>
+            <xs:enumeration value="N"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="Tcep">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TclassTrib">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="21"/>
+            <xs:enumeration value="22"/>
+            <xs:enumeration value="60"/>
+            <xs:enumeration value="70"/>
+            <xs:enumeration value="80"/>
+            <xs:enumeration value="99"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -23,6 +63,39 @@
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Temail">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tfone">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{15}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TindCooperativa">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TindSituacaoEspecial">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -61,6 +134,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TnrProcesso">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{20}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TnrRg">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
@@ -79,6 +159,17 @@
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{14}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TsiglaMin">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:enumeration value="CNAS"/>
+            <xs:enumeration value="MEC"/>
+            <xs:enumeration value="MS"/>
+            <xs:enumeration value="MDS"/>
+            <xs:enumeration value="LEI"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -130,6 +221,14 @@
             <xs:enumeration value="VD"/>
             <xs:enumeration value="VLA"/>
             <xs:enumeration value="VL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpProcesso">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="J"/>
         </xs:restriction>
     </xs:simpleType>
 
