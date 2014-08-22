@@ -48,19 +48,19 @@
 
     <xs:complexType name="TdadosHorContratual">
         <xs:sequence>
-            <xs:element name="horaEntrada" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="horaSaida" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horaEntrada" type="ThoraMin" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horaSaida" type="ThoraMin" minOccurs="1" maxOccurs="1"/>
             <xs:element name="durJornada" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="tpJornada" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpJornada" type="TtpJornada" minOccurs="1" maxOccurs="1"/>
             <xs:element name="descTpJornada" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="tpIntervalo" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tpIntervalo" type="TtpIntervalo" minOccurs="1" maxOccurs="1"/>
             <xs:element name="durIntervalo" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 
             <xs:element name="horarioIntervalo" minOccurs="0" maxOccurs="5">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="inicioIntervalo" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="terminoIntervalo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="inicioIntervalo" type="ThoraMin" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="terminoIntervalo" type="ThoraMin" minOccurs="1" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -79,8 +79,8 @@
     <xs:complexType name="TideHorContratual">
         <xs:sequence>
             <xs:element name="codHorContratual" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="iniValidade" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="fimValidade" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="iniValidade" type="TmesAno" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fimValidade" type="TmesAno" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
