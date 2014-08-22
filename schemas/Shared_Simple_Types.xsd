@@ -152,6 +152,14 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TindAdmissao">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TindApurAliqFap">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
@@ -298,6 +306,15 @@
             <xs:enumeration value="MS"/>
             <xs:enumeration value="MDS"/>
             <xs:enumeration value="LEI"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpAdmissao">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
         </xs:restriction>
     </xs:simpleType>
 
