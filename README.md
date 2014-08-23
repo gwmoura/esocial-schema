@@ -69,3 +69,18 @@ Listagem de Schemas:
 * **S_2900:** Exclusão de Eventos
 * **Shared_Complex_Types:** ComplexTypes compartilhados pelos layouts do eSocial
 * **Shared_Simple_Types:** SimpleTypes compartilhados pelos layouts do eSocial
+
+Observações
+-----------
+Embora os XML Schemas do e-Social desenvolvidos pelo [Instituto Stela®](http://stela.org.br/portal/)
+possam ser utilizados para a validação dos arquivos antes de sua transmissão para a previdência
+social, é importante ressaltar que este não é o objetivo principal do desenvolvimento deste modelo.
+
+Grande parte das validações descritas no [manual do e-Social](http://www.esocial.gov.br/doc/MOS_V_1_1_Publicacao.pdf)
+não podem ser implementadas em nível de XSD, portanto, é de extrema importância a leitura e o entendimento
+deste manual no momento da homologação das transmissões.
+
+Por fim, este modelo foi desenvolvido principalmente para a geração automática de código de sistemas
+extratores de informação de arquivos já transmitidos e validados do e-social. Assim, alguns modelos 
+adotados, embora não sejam os mais eficiêntes na utilização usual de um arquivo XSD, atendem às necessidades
+de implementação e de documentação deste código automaticamente gerado.
