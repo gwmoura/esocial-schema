@@ -16,7 +16,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="dtRetorno" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="TcodMotAfastamento" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
