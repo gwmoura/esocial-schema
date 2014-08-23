@@ -59,6 +59,264 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TcodAgenteCausador">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="302010200"/>
+            <xs:enumeration value="302010250"/>
+            <xs:enumeration value="302010300"/>
+            <xs:enumeration value="302010350"/>
+            <xs:enumeration value="302010400"/>
+            <xs:enumeration value="302010450"/>
+            <xs:enumeration value="302010500"/>
+            <xs:enumeration value="302010550"/>
+            <xs:enumeration value="302010600"/>
+            <xs:enumeration value="302010650"/>
+            <xs:enumeration value="302010700"/>
+            <xs:enumeration value="302010900"/>
+            <xs:enumeration value="302030900"/>
+            <xs:enumeration value="302050100"/>
+            <xs:enumeration value="302050200"/>
+            <xs:enumeration value="302050300"/>
+            <xs:enumeration value="302050400"/>
+            <xs:enumeration value="302050500"/>
+            <xs:enumeration value="302050600"/>
+            <xs:enumeration value="302050700"/>
+            <xs:enumeration value="302050800"/>
+            <xs:enumeration value="302050900"/>
+            <xs:enumeration value="302070100"/>
+            <xs:enumeration value="302070300"/>
+            <xs:enumeration value="302070500"/>
+            <xs:enumeration value="302070700"/>
+            <xs:enumeration value="302070900"/>
+            <xs:enumeration value="302090000"/>
+            <xs:enumeration value="303010040"/>
+            <xs:enumeration value="303010080"/>
+            <xs:enumeration value="303010120"/>
+            <xs:enumeration value="303010160"/>
+            <xs:enumeration value="303010200"/>
+            <xs:enumeration value="303010240"/>
+            <xs:enumeration value="303010280"/>
+            <xs:enumeration value="303010320"/>
+            <xs:enumeration value="303010360"/>
+            <xs:enumeration value="303010400"/>
+            <xs:enumeration value="303010440"/>
+            <xs:enumeration value="303010480"/>
+            <xs:enumeration value="303010520"/>
+            <xs:enumeration value="303010560"/>
+            <xs:enumeration value="303010600"/>
+            <xs:enumeration value="303010640"/>
+            <xs:enumeration value="303010680"/>
+            <xs:enumeration value="303010720"/>
+            <xs:enumeration value="303010760"/>
+            <xs:enumeration value="303010800"/>
+            <xs:enumeration value="303010900"/>
+            <xs:enumeration value="303015050"/>
+            <xs:enumeration value="303015100"/>
+            <xs:enumeration value="303015150"/>
+            <xs:enumeration value="303015200"/>
+            <xs:enumeration value="303015250"/>
+            <xs:enumeration value="303015300"/>
+            <xs:enumeration value="303015350"/>
+            <xs:enumeration value="303015400"/>
+            <xs:enumeration value="303015450"/>
+            <xs:enumeration value="303015500"/>
+            <xs:enumeration value="303015550"/>
+            <xs:enumeration value="303015600"/>
+            <xs:enumeration value="303015650"/>
+            <xs:enumeration value="303015700"/>
+            <xs:enumeration value="303015750"/>
+            <xs:enumeration value="303015900"/>
+            <xs:enumeration value="303020040"/>
+            <xs:enumeration value="303020080"/>
+            <xs:enumeration value="303020120"/>
+            <xs:enumeration value="303020160"/>
+            <xs:enumeration value="303020200"/>
+            <xs:enumeration value="303020240"/>
+            <xs:enumeration value="303020280"/>
+            <xs:enumeration value="303020320"/>
+            <xs:enumeration value="303020360"/>
+            <xs:enumeration value="303020400"/>
+            <xs:enumeration value="303020440"/>
+            <xs:enumeration value="303020480"/>
+            <xs:enumeration value="303020520"/>
+            <xs:enumeration value="303020560"/>
+            <xs:enumeration value="303020600"/>
+            <xs:enumeration value="303020640"/>
+            <xs:enumeration value="303020680"/>
+            <xs:enumeration value="303020720"/>
+            <xs:enumeration value="303020760"/>
+            <xs:enumeration value="303020900"/>
+            <xs:enumeration value="303025300"/>
+            <xs:enumeration value="303025600"/>
+            <xs:enumeration value="303025900"/>
+            <xs:enumeration value="303030050"/>
+            <xs:enumeration value="303030100"/>
+            <xs:enumeration value="303030150"/>
+            <xs:enumeration value="303030200"/>
+            <xs:enumeration value="303030250"/>
+            <xs:enumeration value="303030300"/>
+            <xs:enumeration value="303030350"/>
+            <xs:enumeration value="303030400"/>
+            <xs:enumeration value="303030450"/>
+            <xs:enumeration value="303030500"/>
+            <xs:enumeration value="303030900"/>
+            <xs:enumeration value="303035300"/>
+            <xs:enumeration value="303035400"/>
+            <xs:enumeration value="303035500"/>
+            <xs:enumeration value="303035600"/>
+            <xs:enumeration value="303035700"/>
+            <xs:enumeration value="303035900"/>
+            <xs:enumeration value="303040100"/>
+            <xs:enumeration value="303040200"/>
+            <xs:enumeration value="303040300"/>
+            <xs:enumeration value="303040400"/>
+            <xs:enumeration value="303040500"/>
+            <xs:enumeration value="303040600"/>
+            <xs:enumeration value="303040700"/>
+            <xs:enumeration value="303040750"/>
+            <xs:enumeration value="303040800"/>
+            <xs:enumeration value="303040900"/>
+            <xs:enumeration value="303045200"/>
+            <xs:enumeration value="303045400"/>
+            <xs:enumeration value="303045600"/>
+            <xs:enumeration value="303045900"/>
+            <xs:enumeration value="303050200"/>
+            <xs:enumeration value="303050400"/>
+            <xs:enumeration value="303050600"/>
+            <xs:enumeration value="303050900"/>
+            <xs:enumeration value="303055200"/>
+            <xs:enumeration value="303055400"/>
+            <xs:enumeration value="303055600"/>
+            <xs:enumeration value="303055900"/>
+            <xs:enumeration value="303060000"/>
+            <xs:enumeration value="303065000"/>
+            <xs:enumeration value="303065300"/>
+            <xs:enumeration value="303065600"/>
+            <xs:enumeration value="303065900"/>
+            <xs:enumeration value="303066300"/>
+            <xs:enumeration value="303066600"/>
+            <xs:enumeration value="303070200"/>
+            <xs:enumeration value="303070400"/>
+            <xs:enumeration value="303070600"/>
+            <xs:enumeration value="303070900"/>
+            <xs:enumeration value="303075100"/>
+            <xs:enumeration value="303075150"/>
+            <xs:enumeration value="303075200"/>
+            <xs:enumeration value="303075250"/>
+            <xs:enumeration value="303075300"/>
+            <xs:enumeration value="303075350"/>
+            <xs:enumeration value="303075400"/>
+            <xs:enumeration value="303075450"/>
+            <xs:enumeration value="303075500"/>
+            <xs:enumeration value="303075550"/>
+            <xs:enumeration value="303075600"/>
+            <xs:enumeration value="303075650"/>
+            <xs:enumeration value="303075700"/>
+            <xs:enumeration value="303075750"/>
+            <xs:enumeration value="303075800"/>
+            <xs:enumeration value="303075900"/>
+            <xs:enumeration value="303090000"/>
+            <xs:enumeration value="305004100"/>
+            <xs:enumeration value="305004150"/>
+            <xs:enumeration value="305004200"/>
+            <xs:enumeration value="305004250"/>
+            <xs:enumeration value="305004300"/>
+            <xs:enumeration value="305004350"/>
+            <xs:enumeration value="305004400"/>
+            <xs:enumeration value="305004450"/>
+            <xs:enumeration value="305004500"/>
+            <xs:enumeration value="305004550"/>
+            <xs:enumeration value="305004600"/>
+            <xs:enumeration value="305004650"/>
+            <xs:enumeration value="305004700"/>
+            <xs:enumeration value="305004750"/>
+            <xs:enumeration value="305004900"/>
+            <xs:enumeration value="305008500"/>
+            <xs:enumeration value="305008900"/>
+            <xs:enumeration value="305020000"/>
+            <xs:enumeration value="305024100"/>
+            <xs:enumeration value="305024300"/>
+            <xs:enumeration value="305024500"/>
+            <xs:enumeration value="305024700"/>
+            <xs:enumeration value="305024900"/>
+            <xs:enumeration value="305028000"/>
+            <xs:enumeration value="305032000"/>
+            <xs:enumeration value="305032500"/>
+            <xs:enumeration value="305036000"/>
+            <xs:enumeration value="305040100"/>
+            <xs:enumeration value="305040150"/>
+            <xs:enumeration value="305040200"/>
+            <xs:enumeration value="305040250"/>
+            <xs:enumeration value="305040300"/>
+            <xs:enumeration value="305040350"/>
+            <xs:enumeration value="305040400"/>
+            <xs:enumeration value="305040450"/>
+            <xs:enumeration value="305040500"/>
+            <xs:enumeration value="305040600"/>
+            <xs:enumeration value="305040650"/>
+            <xs:enumeration value="305040700"/>
+            <xs:enumeration value="305040900"/>
+            <xs:enumeration value="305044000"/>
+            <xs:enumeration value="305048000"/>
+            <xs:enumeration value="305048300"/>
+            <xs:enumeration value="305048400"/>
+            <xs:enumeration value="305048500"/>
+            <xs:enumeration value="305048600"/>
+            <xs:enumeration value="305048700"/>
+            <xs:enumeration value="305048900"/>
+            <xs:enumeration value="305052000"/>
+            <xs:enumeration value="305056000"/>
+            <xs:enumeration value="305060000"/>
+            <xs:enumeration value="305064000"/>
+            <xs:enumeration value="305064300"/>
+            <xs:enumeration value="305064400"/>
+            <xs:enumeration value="305064500"/>
+            <xs:enumeration value="305064600"/>
+            <xs:enumeration value="305064700"/>
+            <xs:enumeration value="305064900"/>
+            <xs:enumeration value="305068300"/>
+            <xs:enumeration value="305068600"/>
+            <xs:enumeration value="305072000"/>
+            <xs:enumeration value="305076000"/>
+            <xs:enumeration value="305090000"/>
+            <xs:enumeration value="306020000"/>
+            <xs:enumeration value="306040000"/>
+            <xs:enumeration value="306060000"/>
+            <xs:enumeration value="306090000"/>
+            <xs:enumeration value="307030100"/>
+            <xs:enumeration value="307030200"/>
+            <xs:enumeration value="307030250"/>
+            <xs:enumeration value="307030300"/>
+            <xs:enumeration value="307030400"/>
+            <xs:enumeration value="307030500"/>
+            <xs:enumeration value="307030600"/>
+            <xs:enumeration value="307030900"/>
+            <xs:enumeration value="307040100"/>
+            <xs:enumeration value="307040300"/>
+            <xs:enumeration value="307040500"/>
+            <xs:enumeration value="307040700"/>
+            <xs:enumeration value="307040900"/>
+            <xs:enumeration value="307050900"/>
+            <xs:enumeration value="307070000"/>
+            <xs:enumeration value="354000000"/>
+            <xs:enumeration value="354010300"/>
+            <xs:enumeration value="354010600"/>
+            <xs:enumeration value="354020000"/>
+            <xs:enumeration value="354040000"/>
+            <xs:enumeration value="354050300"/>
+            <xs:enumeration value="355016000"/>
+            <xs:enumeration value="355016600"/>
+            <xs:enumeration value="355016800"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TcodCID">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[A-Z]([0-9]){2}((\.[0-9])|(\.[0-9]{2}))?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TcodMotAfastamento">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
@@ -79,6 +337,117 @@
             <xs:enumeration value="16"/>
             <xs:enumeration value="17"/>
             <xs:enumeration value="99"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TcodParteAtingida">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="753030000"/>
+            <xs:enumeration value="753050000"/>
+            <xs:enumeration value="753070100"/>
+            <xs:enumeration value="753070300"/>
+            <xs:enumeration value="753070500"/>
+            <xs:enumeration value="753070700"/>
+            <xs:enumeration value="753070800"/>
+            <xs:enumeration value="753080000"/>
+            <xs:enumeration value="753090000"/>
+            <xs:enumeration value="753510000"/>
+            <xs:enumeration value="753510200"/>
+            <xs:enumeration value="754000000"/>
+            <xs:enumeration value="755010400"/>
+            <xs:enumeration value="755010600"/>
+            <xs:enumeration value="755030000"/>
+            <xs:enumeration value="755050000"/>
+            <xs:enumeration value="755070000"/>
+            <xs:enumeration value="755080000"/>
+            <xs:enumeration value="755090000"/>
+            <xs:enumeration value="756020000"/>
+            <xs:enumeration value="756030000"/>
+            <xs:enumeration value="756040000"/>
+            <xs:enumeration value="756050000"/>
+            <xs:enumeration value="756060000"/>
+            <xs:enumeration value="756070000"/>
+            <xs:enumeration value="756090000"/>
+            <xs:enumeration value="757010000"/>
+            <xs:enumeration value="757010200"/>
+            <xs:enumeration value="757010400"/>
+            <xs:enumeration value="757010600"/>
+            <xs:enumeration value="757030000"/>
+            <xs:enumeration value="757050000"/>
+            <xs:enumeration value="757070000"/>
+            <xs:enumeration value="757080000"/>
+            <xs:enumeration value="757090000"/>
+            <xs:enumeration value="758000000"/>
+            <xs:enumeration value="758500000"/>
+            <xs:enumeration value="758520000"/>
+            <xs:enumeration value="758530000"/>
+            <xs:enumeration value="758540000"/>
+            <xs:enumeration value="758550000"/>
+            <xs:enumeration value="758560000"/>
+            <xs:enumeration value="758570000"/>
+            <xs:enumeration value="758590000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TcodSitGeradora">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="200004300"/>
+            <xs:enumeration value="200004600"/>
+            <xs:enumeration value="200008300"/>
+            <xs:enumeration value="200008600"/>
+            <xs:enumeration value="200008900"/>
+            <xs:enumeration value="200012200"/>
+            <xs:enumeration value="200012300"/>
+            <xs:enumeration value="200012400"/>
+            <xs:enumeration value="200012500"/>
+            <xs:enumeration value="200012600"/>
+            <xs:enumeration value="200012700"/>
+            <xs:enumeration value="200012900"/>
+            <xs:enumeration value="200016300"/>
+            <xs:enumeration value="200016600"/>
+            <xs:enumeration value="200016900"/>
+            <xs:enumeration value="200020100"/>
+            <xs:enumeration value="200020300"/>
+            <xs:enumeration value="200020500"/>
+            <xs:enumeration value="200020700"/>
+            <xs:enumeration value="200020900"/>
+            <xs:enumeration value="200024300"/>
+            <xs:enumeration value="200024400"/>
+            <xs:enumeration value="200024500"/>
+            <xs:enumeration value="200024600"/>
+            <xs:enumeration value="200024700"/>
+            <xs:enumeration value="200024900"/>
+            <xs:enumeration value="200028300"/>
+            <xs:enumeration value="200028600"/>
+            <xs:enumeration value="200032200"/>
+            <xs:enumeration value="200032400"/>
+            <xs:enumeration value="200032600"/>
+            <xs:enumeration value="200032900"/>
+            <xs:enumeration value="200036000"/>
+            <xs:enumeration value="200040300"/>
+            <xs:enumeration value="200040600"/>
+            <xs:enumeration value="200044300"/>
+            <xs:enumeration value="200044600"/>
+            <xs:enumeration value="200048200"/>
+            <xs:enumeration value="200048400"/>
+            <xs:enumeration value="200048600"/>
+            <xs:enumeration value="200048900"/>
+            <xs:enumeration value="200052000"/>
+            <xs:enumeration value="200056000"/>
+            <xs:enumeration value="200060000"/>
+            <xs:enumeration value="200064000"/>
+            <xs:enumeration value="200068000"/>
+            <xs:enumeration value="200072000"/>
+            <xs:enumeration value="200072300"/>
+            <xs:enumeration value="200072600"/>
+            <xs:enumeration value="200076200"/>
+            <xs:enumeration value="200076400"/>
+            <xs:enumeration value="200076600"/>
+            <xs:enumeration value="200076900"/>
+            <xs:enumeration value="200080200"/>
+            <xs:enumeration value="200080400"/>
+            <xs:enumeration value="200080600"/>
+            <xs:enumeration value="200080900"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -237,6 +606,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TnrCat">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:pattern value="[0-9]{15}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TnrCnh">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
@@ -332,12 +708,28 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TtpAcidente">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TtpAdmissao">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>
             <xs:enumeration value="3"/>
             <xs:enumeration value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpCat">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -387,6 +779,17 @@
             <xs:enumeration value="2"/>
             <xs:enumeration value="3"/>
             <xs:enumeration value="99"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpLocal">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="9"/>
         </xs:restriction>
     </xs:simpleType>
 
