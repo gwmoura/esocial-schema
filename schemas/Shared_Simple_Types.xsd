@@ -592,6 +592,22 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TinfoOnus">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TinfoOnusRemuneracao">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TmesAno">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
@@ -709,6 +725,14 @@
     </xs:simpleType>
 
     <xs:simpleType name="TtpAcidente">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpAcidenteTransito">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>

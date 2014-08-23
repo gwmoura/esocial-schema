@@ -16,14 +16,14 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="dtAfastamento" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMotAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="tpAcidenteTransito" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="codMotAfastamento" type="TcodMotAfastamento" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="tpAcidenteTransito" type="TtpAcidenteTransito" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
 
                         <xs:element name="infoAtestado" minOccurs="0" maxOccurs="1">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="codCID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="codCID" type="TcodCID" minOccurs="0" maxOccurs="1"/>
                                     <xs:element name="qtdDiasAfastamento" type="xs:integer" minOccurs="1" maxOccurs="1"/>
                                     <xs:element name="emitente" type="Temitente" minOccurs="1" maxOccurs="1"/>
                                 </xs:sequence>
@@ -34,7 +34,7 @@
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="cnpjCessionario" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="infoOnus" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="infoOnus" type="TinfoOnus" minOccurs="1" maxOccurs="1"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
@@ -43,7 +43,7 @@
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="cnpjSindicato" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="infoOnusRemuneracao" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="infoOnusRemuneracao" type="TinfoOnusRemuneracao" minOccurs="1" maxOccurs="1"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
