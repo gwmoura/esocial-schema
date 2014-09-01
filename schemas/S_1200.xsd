@@ -8,7 +8,149 @@
 
     <xs:complexType name="evtFpRemuneracao">
         <xs:sequence>
+            <xs:element name="ideEvento" type="TideEventoPeriodico" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="ideTrabalhador" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="qtdDepSF" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="qtdDepIRRF" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+
+                        <xs:element name="infoMultiplosVinculos" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="indMV" type="TindMV" minOccurs="1" maxOccurs="1"/>
+
+                                    <xs:element name="remunOutrasEmpresas" minOccurs="0" maxOccurs="10">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="tpInscricao" type="TtpInscricaoRestrito" minOccurs="1" maxOccurs="1"/>
+                                                <xs:element name="nrInscricao" type="TnrInscricaoEmpregador" minOccurs="1" maxOccurs="1"/>
+                                                <xs:element name="vlrRemuneracao" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="infoSimplesAtivConcomitante" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="indSimples" type="TindSimples" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="infoComplementares" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="nomeTrab" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="dtNascto" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="codCBO" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="natAtividade" type="TnatAtividade" minOccurs="0" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="infoTrabAvulso" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cnpjSindicato" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="fpasSindicato" type="TfpasSindicato" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="codTerceiros" type="TcodTerceiros" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="procJudTrabalhador" minOccurs="0" maxOccurs="99">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="tpTributo" type="TtpTributo" minOccurs="1" maxOccurs="1"/>
+                                    <xs:element name="nrProcJud" type="TnrProcesso" minOccurs="1" maxOccurs="1"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="infoPeriodoApuracao" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="ideEstabLotacao" minOccurs="1" maxOccurs="50">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="tpInscricao" type="TtpInscricao" minOccurs="1" maxOccurs="1"/>
+                                                <xs:element name="nrInscricao" type="TnrInscricao" minOccurs="1" maxOccurs="1"/>
+                                                <xs:element name="codLotacao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+
+                                                <xs:element name="remunPeriodoApuracao" minOccurs="1" maxOccurs="50">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="matricula" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                                            <xs:element name="codCateg" type="TcodCateg" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="bcCP" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="bcIRRF" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="bcFGTS" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="descCP" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="vlrProventos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="vlrDescontos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                            <xs:element name="vlrLiquido" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+
+                                                            <xs:element name="itensRemun" minOccurs="0" maxOccurs="200">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="codRubrica" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                                        <xs:element name="qtdRubrica" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                                                                        <xs:element name="vlrUnitario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                                                                        <xs:element name="vlrRubrica" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+
+                                                            <xs:element name="infoAgenteNocivo" minOccurs="0" maxOccurs="1">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="grauExp" type="TgrauExp" minOccurs="1" maxOccurs="1"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+
+                                                            <xs:element name="infoRescisao" minOccurs="0" maxOccurs="1">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="nrReciboDeslig" type="TnrRecibo" minOccurs="1" maxOccurs="1"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+
+                                                            <xs:element name="pensaoAlimenticia" minOccurs="0" maxOccurs="99">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+
+                                                                        <!--TODO-->
+
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
             <!--TODO-->
+
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:schema>
