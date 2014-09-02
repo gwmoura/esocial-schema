@@ -830,6 +830,16 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TnrLeiAnistia">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Lei 6.683/1979"/>
+            <xs:enumeration value="Lei 8.632/1993"/>
+            <xs:enumeration value="Lei 10.559/2002"/>
+            <xs:enumeration value="Lei 10.790/2003"/>
+            <xs:enumeration value="Lei"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TnrLogradouro">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
@@ -1459,6 +1469,14 @@
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>
             <xs:enumeration value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TtpReintegracao">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="9"/>
         </xs:restriction>
     </xs:simpleType>
 

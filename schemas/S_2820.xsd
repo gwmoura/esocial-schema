@@ -8,7 +8,23 @@
     
     <xs:complexType name="evtReintegracao">
         <xs:sequence>
-            <!--TODO-->
+            <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideVinculo" type="TideVinculo" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="infoReintegracao" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tpReintegracao" type="TtpReintegracao" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="nrProcJud" type="TnrProcesso" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="nrLeiAnistia" type="TnrLeiAnistia" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="dtEfeito" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="dtEfeitoRetorno" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:schema>
