@@ -1198,6 +1198,15 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TtpAcordo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="B"/>
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="D"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TtpAdmissao">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
