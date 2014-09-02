@@ -1252,6 +1252,45 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TtpEvento">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="S-1100"/>
+            <xs:enumeration value="S-1200"/>
+            <xs:enumeration value="S-1300"/>
+            <xs:enumeration value="S-1310"/>
+            <xs:enumeration value="S-1320"/>
+            <xs:enumeration value="S-1330"/>
+            <xs:enumeration value="S-1340"/>
+            <xs:enumeration value="S-1350"/>
+            <xs:enumeration value="S-1360"/>
+            <xs:enumeration value="S-1370"/>
+            <xs:enumeration value="S-1380"/>
+            <xs:enumeration value="S-1390"/>
+            <xs:enumeration value="S-1399"/>
+            <xs:enumeration value="S-1800"/>
+            <xs:enumeration value="S-2100"/>
+            <xs:enumeration value="S-2200"/>
+            <xs:enumeration value="S-2220"/>
+            <xs:enumeration value="S-2240"/>
+            <xs:enumeration value="S-2260"/>
+            <xs:enumeration value="S-2280"/>
+            <xs:enumeration value="S-2320"/>
+            <xs:enumeration value="S-2325"/>
+            <xs:enumeration value="S-2330"/>
+            <xs:enumeration value="S-2340"/>
+            <xs:enumeration value="S-2345"/>
+            <xs:enumeration value="S-2360"/>
+            <xs:enumeration value="S-2365"/>
+            <xs:enumeration value="S-2400"/>
+            <xs:enumeration value="S-2405"/>
+            <xs:enumeration value="S-2600"/>
+            <xs:enumeration value="S-2620"/>
+            <xs:enumeration value="S-2680"/>
+            <xs:enumeration value="S-2800"/>
+            <xs:enumeration value="S-2820"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TtpInscContratante">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
