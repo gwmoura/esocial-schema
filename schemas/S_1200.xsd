@@ -54,7 +54,7 @@
                                                             <xs:element name="vlrProventos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                                             <xs:element name="vlrDescontos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                                             <xs:element name="vlrLiquido" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-                                                            <xs:element name="itensRemun" type="TitensRemun" minOccurs="0" maxOccurs="200"/>
+                                                            <xs:element name="itensRemun" type="TitemRemun" minOccurs="0" maxOccurs="200"/>
                                                             <xs:element name="infoAgenteNocivo" type="TinfoAgenteNocivo" minOccurs="0" maxOccurs="1"/>
 
                                                             <xs:element name="infoRescisao" minOccurs="0" maxOccurs="1">
@@ -112,7 +112,7 @@
                                                                         <xs:element name="vlrProventos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                                                         <xs:element name="vlrDescontos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                                                         <xs:element name="vlrLiquido" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-                                                                        <xs:element name="itensRemun" type="TitensRemun" minOccurs="0" maxOccurs="200"/>
+                                                                        <xs:element name="itensRemun" type="TitemRemun" minOccurs="0" maxOccurs="200"/>
                                                                         <xs:element name="infoAgenteNocivo" type="TinfoAgenteNocivo" minOccurs="0" maxOccurs="1"/>
                                                                         <xs:element name="pensaoAlimenticia" type="TpensaoAlimenticia" minOccurs="0" maxOccurs="99"/>
                                                                     </xs:sequence>
@@ -186,21 +186,6 @@
         <xs:sequence>
             <xs:element name="tpTributo" type="TtpTributo" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nrProcJud" type="TnrProcesso" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TitensRemun">
-        <xs:sequence>
-            <xs:element name="codRubrica" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="qtdRubrica" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="vlrUnitario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="vlrRubrica" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="TinfoAgenteNocivo">
-        <xs:sequence>
-            <xs:element name="grauExp" type="TgrauExp" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

@@ -123,36 +123,11 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TdtAso">
+    <xs:complexType name="Taso">
         <xs:sequence>
             <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
-
-            <xs:element name="medico" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="foneContato" type="Tfone" minOccurs="0" maxOccurs="1"/>
-
-                        <xs:element name="crm" minOccurs="1" maxOccurs="1">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="exame" minOccurs="0" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="medico" type="Tmedico" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="exame" type="Texame" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -174,6 +149,13 @@
             <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codMunicipio" type="xs:integer" minOccurs="1" maxOccurs="1"/>
             <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Texame">
+        <xs:sequence>
+            <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -250,6 +232,37 @@
             <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nisTrab" type="Tnis" minOccurs="1" maxOccurs="1"/>
             <xs:element name="matricula" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TinfoAgenteNocivo">
+        <xs:sequence>
+            <xs:element name="grauExp" type="TgrauExp" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TitemRemun">
+        <xs:sequence>
+            <xs:element name="codRubrica" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="qtdRubrica" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="vlrUnitario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="vlrRubrica" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tmedico">
+        <xs:sequence>
+            <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="foneContato" type="Tfone" minOccurs="0" maxOccurs="1"/>
+
+            <xs:element name="crm" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 

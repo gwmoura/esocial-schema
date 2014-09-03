@@ -43,25 +43,8 @@
                                     <xs:element name="vlrProventos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                     <xs:element name="vlrDescontos" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
                                     <xs:element name="vlrLiquido" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-
-                                    <xs:element name="itemRemuneracao" minOccurs="1" maxOccurs="50">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="codRubrica" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                                <xs:element name="qtdRubrica" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
-                                                <xs:element name="vlrUnitario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
-                                                <xs:element name="vlrRubrica" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
-
-                                    <xs:element name="infoAgenteNocivo" minOccurs="1" maxOccurs="1">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="grauExp" type="TgrauExp" minOccurs="1" maxOccurs="1"/>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
+                                    <xs:element name="itemRemuneracao" type="TitemRemun" minOccurs="1" maxOccurs="50"/>
+                                    <xs:element name="infoAgenteNocivo" type="TinfoAgenteNocivo" minOccurs="1" maxOccurs="1"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
@@ -70,33 +53,8 @@
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
-
-                                    <xs:element name="exame" minOccurs="0" maxOccurs="50">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="dtExame" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                                                <xs:element name="descExame" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
-
-                                    <xs:element name="medico" minOccurs="1" maxOccurs="1">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="nomeMedico" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                                <xs:element name="foneContato" type="Tfone" minOccurs="0" maxOccurs="1"/>
-
-                                                <xs:element name="crm" minOccurs="1" maxOccurs="1">
-                                                    <xs:complexType>
-                                                        <xs:sequence>
-                                                            <xs:element name="nrCRM" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                                                            <xs:element name="ufCRM" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                                                        </xs:sequence>
-                                                    </xs:complexType>
-                                                </xs:element>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
+                                    <xs:element name="exame" type="Texame" minOccurs="0" maxOccurs="50"/>
+                                    <xs:element name="medico" type="Tmedico" minOccurs="1" maxOccurs="1"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>

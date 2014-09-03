@@ -24,7 +24,7 @@
                         <xs:element name="FGTS" type="TFGTS" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="sucessaoVinc" type="TsucessaoVinc" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="cessaoTrab" type="TcessaoTrab" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="ASO" type="TdtAso" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="ASO" type="Taso" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
