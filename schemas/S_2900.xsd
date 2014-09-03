@@ -17,15 +17,7 @@
                         <xs:element name="tpEvento" type="TtpEvento" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="nrReciboEvento" type="TnrRecibo" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="ideTrabalhador" type="TideTrabalhador" minOccurs="0" maxOccurs="1"/>
-
-                        <xs:element name="ideFolhaPagto" minOccurs="0" maxOccurs="1">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="indApuracao" type="TindApuracao" minOccurs="1" maxOccurs="1"/>
-                                    <xs:element name="perApuracao" type="TperApuracao" minOccurs="1" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
+                        <xs:element name="ideFolhaPagto" type="TideFolhaPagto" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

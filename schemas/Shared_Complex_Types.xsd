@@ -224,6 +224,13 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="TideFolhaPagto">
+        <xs:sequence>
+            <xs:element name="indApuracao" type="TindApuracao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="perApuracao" type="TperApuracao" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="TidePeriodo">
         <xs:sequence>
             <xs:element name="iniValidade" type="TmesAno" minOccurs="1" maxOccurs="1"/>
