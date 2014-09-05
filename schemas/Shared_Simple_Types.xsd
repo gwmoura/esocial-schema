@@ -1285,6 +1285,17 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TtpDesligDiretorNaoEmpregado">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TtpEvento">
         <xs:restriction base="xs:string">
             <xs:enumeration value="S-1100"/>
