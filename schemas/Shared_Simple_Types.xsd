@@ -790,10 +790,26 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="TnatEstagio">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="O"/>
+            <xs:enumeration value="N"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="Tnis">
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
             <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TnivEstagio">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
         </xs:restriction>
     </xs:simpleType>
 
