@@ -17,7 +17,7 @@
                         <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="dtAlteracao" type="xs:date" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="contribIndividual" type="TcontribIndividual" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="contribIndividual" type="TcontribIndividualAlteracao" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="servPubIndConselho" type="TservPubIndConselho" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="estagiario" type="Testagiario" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
@@ -28,7 +28,7 @@
         <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="TcontribIndividual">
+    <xs:complexType name="TcontribIndividualAlteracao">
         <xs:sequence>
             <xs:element name="codCateg" type="TcodCateg" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>

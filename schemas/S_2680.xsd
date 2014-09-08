@@ -17,7 +17,7 @@
                         <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="trabalhadorAvulso" type="TdtTermino" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="contribIndividual" type="TcontribIndividual" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="contribIndividual" type="TcontribIndividualTermino" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="servPubIndConselho" type="TdtTermino" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="dirigenteSindical" type="TdtTermino" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="estagiario" type="TdtTermino" minOccurs="0" maxOccurs="1"/>
@@ -35,7 +35,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TcontribIndividual">
+    <xs:complexType name="TcontribIndividualTermino">
         <xs:sequence>
             <xs:element name="codCateg" type="TcodCateg" minOccurs="1" maxOccurs="1"/>
             <xs:element name="dtTermino" type="xs:date" minOccurs="1" maxOccurs="1"/>
