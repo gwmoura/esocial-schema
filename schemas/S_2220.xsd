@@ -8,7 +8,27 @@
 
     <xs:complexType name="evtAltCadastral">
         <xs:sequence>
-            <!--TODO-->
+            <xs:element name="ideEvento" type="TideEventoRetificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ideEmpregador" type="TideEmpregador" minOccurs="1" maxOccurs="1"/>
+
+            <xs:element name="ideTrabalhador" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="alteracao" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dtAlteracao" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="dadosTrabalhador" type="TtrabalhadorSemCpf" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="versao" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:schema>

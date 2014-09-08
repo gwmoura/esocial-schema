@@ -460,6 +460,33 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="TtrabalhadorSemCpf">
+        <xs:sequence>
+            <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="nomeTrab" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="sexo" type="Tsexo" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="racaCor" type="TracaCor" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="estadoCivil" type="TestadoCivil" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="grauInstrucao" type="TgrauInstrucao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nascimento" type="Tnascimento" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="documentos" type="Tdocumentos" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="endereco" type="TenderecoCompleto" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="trabEstrangeiro" type="TtrabEstrangeiro" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="infoDeficiencia" type="TinfoDeficiencia" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="dependente" type="Tdependente" minOccurs="0" maxOccurs="50"/>
+
+            <xs:element name="aposentadoria" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="trabAposentado" type="TbooleanStr" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="contato" type="Tcontato" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="TtrabalhadorSemVinculo">
         <xs:sequence>
             <xs:element name="cpfTrab" type="Tcpf" minOccurs="1" maxOccurs="1"/>
