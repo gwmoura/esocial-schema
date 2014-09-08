@@ -6,6 +6,19 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:include schemaLocation="Shared_Simple_Types.xsd"/>
 
+    <xs:complexType name="TageIntegracao">
+        <xs:sequence>
+            <xs:element name="cnpjAgenteIntegracao" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nomeRazao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codMunicipio" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="Taso">
         <xs:sequence>
             <xs:element name="dtAso" type="xs:date" minOccurs="1" maxOccurs="1"/>
@@ -43,16 +56,7 @@
             <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codCBO" type="xs:integer" minOccurs="1" maxOccurs="1"/>
             <xs:element name="dataBase" type="TdataBase" minOccurs="1" maxOccurs="1"/>
-
-            <xs:element name="remuneracao" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="unidSalFixo" type="TunidSalFixo" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="remuneracao" type="Tremuneracao" minOccurs="1" maxOccurs="1"/>
 
             <xs:element name="duracao" minOccurs="1" maxOccurs="1">
                 <xs:complexType>
@@ -354,6 +358,19 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="TinstEnsino">
+        <xs:sequence>
+            <xs:element name="cnpjInstEnsino" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nomeRazao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codMunicipio" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="TitemRemun">
         <xs:sequence>
             <xs:element name="codRubrica" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -391,12 +408,27 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="Tremuneracao">
+        <xs:sequence>
+            <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unidSalFixo" type="TunidSalFixo" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="TsucessaoVinc">
         <xs:sequence>
             <xs:element name="cnpjEmpregadorAnterior" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
             <xs:element name="matriculaAnterior" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="dtInicioVinculo" type="xs:date" minOccurs="1" maxOccurs="1"/>
             <xs:element name="observacao" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TsupervisorEstagio">
+        <xs:sequence>
+            <xs:element name="cpfSupervisor" type="Tcpf" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nomeSupervisor" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

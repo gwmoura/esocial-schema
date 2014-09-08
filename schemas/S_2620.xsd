@@ -38,14 +38,6 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Tremuneracao">
-        <xs:sequence>
-            <xs:element name="vlrSalFixo" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="unidSalFixo" type="TunidSalFixo" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="descSalVariavel" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="TservPubIndConselho">
         <xs:sequence>
             <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -63,45 +55,9 @@
             <xs:element name="nrApolice" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="vlrBolsa" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
             <xs:element name="dtPrevistaTermino" type="xs:date" minOccurs="1" maxOccurs="1"/>
-
-            <xs:element name="instEnsino" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="cnpjInstEnsino" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nomeRazao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMunicipio" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="ageIntegracao" minOccurs="1" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="cnpjAgenteIntegracao" type="Tcnpj" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nomeRazao" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="descLogradouro" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nrLogradouro" type="TnrLogradouro" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="bairro" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="cep" type="Tcep" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="codMunicipio" type="xs:integer" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="uf" type="Tuf" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="supervisorEstagio" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="cpfSupervisor" type="Tcpf" minOccurs="1" maxOccurs="1"/>
-                        <xs:element name="nomeSupervisor" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="instEnsino" type="TinstEnsino" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ageIntegracao" type="TageIntegracao" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="supervisorEstagio" type="TsupervisorEstagio" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
