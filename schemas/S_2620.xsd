@@ -18,8 +18,8 @@
                         <xs:element name="nisTrab" type="Tnis" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="dtAlteracao" type="xs:date" minOccurs="1" maxOccurs="1"/>
                         <xs:element name="contribIndividual" type="TcontribIndividualAlteracao" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="servPubIndConselho" type="TservPubIndConselho" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="estagiario" type="Testagiario" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="servPubIndConselho" type="TservPubIndConselhoAlteracao" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="estagiario" type="TestagiarioAlteracao" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -38,7 +38,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TservPubIndConselho">
+    <xs:complexType name="TservPubIndConselhoAlteracao">
         <xs:sequence>
             <xs:element name="codCargo" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codFuncao" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -47,7 +47,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Testagiario">
+    <xs:complexType name="TestagiarioAlteracao">
         <xs:sequence>
             <xs:element name="natEstagio" type="TnatEstagio" minOccurs="1" maxOccurs="1"/>
             <xs:element name="nivEstagio" type="TnivEstagio" minOccurs="1" maxOccurs="1"/>

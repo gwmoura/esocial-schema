@@ -17,9 +17,9 @@
                     <xs:choice>
                         <xs:element name="trabalhadorAvulso" type="TtrabalhadorAvulso" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="contribIndividual" type="TcontribIndividualInicio" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="servPubIndConselho" type="TservPubIndConselho" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="servPubIndConselho" type="TservPubIndConselhoInicio" minOccurs="0" maxOccurs="1"/>
                         <xs:element name="dirigenteSindical" type="TdirigenteSindical" minOccurs="0" maxOccurs="1"/>
-                        <xs:element name="estagiario" type="Testagiario" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="estagiario" type="TestagiarioInicio" minOccurs="0" maxOccurs="1"/>
                     </xs:choice>
                 </xs:complexType>
             </xs:element>
@@ -47,7 +47,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="TservPubIndConselho">
+    <xs:complexType name="TservPubIndConselhoInicio">
         <xs:sequence>
             <xs:element name="dtInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codCateg" type="TcodCateg" minOccurs="1" maxOccurs="1"/>
@@ -76,7 +76,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Testagiario">
+    <xs:complexType name="TestagiarioInicio">
         <xs:sequence>
             <xs:element name="dtInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
             <xs:element name="codCateg" type="TcodCateg" minOccurs="1" maxOccurs="1"/>
